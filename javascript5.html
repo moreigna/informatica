@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!--Ejercicio 1-->
+    <h3>El ciclo for:</h3>
+    <p>Ejemplo: imprimir los números del 1 al 5.</p>
+    <button id="ejemplo1" type="button">Ver</button> 
+    <!--Ejercicio 2-->
+    <h3>El ciclo while:</h3>
+    <p>Ejemplo: cuenta regresiva.</p>
+    <button id="ejemplo2" type="button">Ver</button>
+    
+    <h3>El ciclo do...while:</h3>
+    <p>Ejemplo: comprobar ingredientes.</p>
+    <button id="ejemplo3" type="button">Ver</button>
+    <!--Ejercicio 3-->
+
+<script>
+    //comentario//
+    const btn1 = document.querySelector("#ejemplo1");
+    btn1.addEventListener("click", function() {
+        let mensaje = "Imprimiendo números del 1 al 5:\n";
+
+            for (let i = 1; i <= 5; i++) {
+mensaje += "Número " + i + "\n";
+}
+alert(mensaje);
+});
+
+const btn2 = document.querySelector("#ejemplo2");
+btn2.addEventListener("click", function() {
+let mensaje = "Cuenta regresiva:\n";
+let numero = 5;
+while (numero > 0) {
+mensaje += "Número: " + numero + "\n";
+numero--;
+}
+alert(mensaje);
+});
+
+const btn3 = document.querySelector("#ejemplo3");
+btn3.addEventListener("click", function() {
+let mensaje = "Comprobando ingredientes:\n";
+let ingredientes = ["Tomate", "Lechuga", "Zanahoria", "Pepino"];
+let i = 0;
+do {
+mensaje += "Ingrediente: " + ingredientes[i] + "\n";
+i++;
+} while (i < ingredientes.length);
+alert(mensaje);
+});
+
+
+
+</script>
+</body>
+</html>
